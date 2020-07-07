@@ -1,0 +1,608 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		182161DD24B49BDA00A5752B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 182161DC24B49BDA00A5752B /* AppDelegate.m */; };
+		182161E024B49BDA00A5752B /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 182161DF24B49BDA00A5752B /* SceneDelegate.m */; };
+		182161E324B49BDA00A5752B /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182161E224B49BDA00A5752B /* MasterViewController.m */; };
+		182161E624B49BDA00A5752B /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182161E524B49BDA00A5752B /* DetailViewController.m */; };
+		182161E924B49BDA00A5752B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182161E724B49BDA00A5752B /* Main.storyboard */; };
+		182161EB24B49BDC00A5752B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 182161EA24B49BDC00A5752B /* Assets.xcassets */; };
+		182161EE24B49BDC00A5752B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182161EC24B49BDC00A5752B /* LaunchScreen.storyboard */; };
+		182161F124B49BDC00A5752B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 182161F024B49BDC00A5752B /* main.m */; };
+		182161FB24B49BDC00A5752B /* AsurionTestYamadaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 182161FA24B49BDC00A5752B /* AsurionTestYamadaTests.m */; };
+		1821620624B49BDC00A5752B /* AsurionTestYamadaUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1821620524B49BDC00A5752B /* AsurionTestYamadaUITests.m */; };
+		1821621724B49C9D00A5752B /* PetTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1821621524B49C9D00A5752B /* PetTableViewCell.m */; };
+		1821621824B49C9D00A5752B /* PetTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1821621524B49C9D00A5752B /* PetTableViewCell.m */; };
+		1821621924B49C9D00A5752B /* PetTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1821621524B49C9D00A5752B /* PetTableViewCell.m */; };
+		1821621A24B49C9D00A5752B /* PetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1821621624B49C9D00A5752B /* PetTableViewCell.xib */; };
+		1821621B24B49C9D00A5752B /* PetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1821621624B49C9D00A5752B /* PetTableViewCell.xib */; };
+		1821621C24B49C9D00A5752B /* PetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1821621624B49C9D00A5752B /* PetTableViewCell.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		182161F724B49BDC00A5752B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 182161D024B49BDA00A5752B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 182161D724B49BDA00A5752B;
+			remoteInfo = AsurionTestYamada;
+		};
+		1821620224B49BDC00A5752B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 182161D024B49BDA00A5752B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 182161D724B49BDA00A5752B;
+			remoteInfo = AsurionTestYamada;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		182161D824B49BDA00A5752B /* AsurionTestYamada.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AsurionTestYamada.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		182161DB24B49BDA00A5752B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		182161DC24B49BDA00A5752B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		182161DE24B49BDA00A5752B /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		182161DF24B49BDA00A5752B /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		182161E124B49BDA00A5752B /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		182161E224B49BDA00A5752B /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		182161E424B49BDA00A5752B /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		182161E524B49BDA00A5752B /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		182161E824B49BDA00A5752B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		182161EA24B49BDC00A5752B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		182161ED24B49BDC00A5752B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		182161EF24B49BDC00A5752B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		182161F024B49BDC00A5752B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		182161F624B49BDC00A5752B /* AsurionTestYamadaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AsurionTestYamadaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		182161FA24B49BDC00A5752B /* AsurionTestYamadaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AsurionTestYamadaTests.m; sourceTree = "<group>"; };
+		182161FC24B49BDC00A5752B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1821620124B49BDC00A5752B /* AsurionTestYamadaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AsurionTestYamadaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1821620524B49BDC00A5752B /* AsurionTestYamadaUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AsurionTestYamadaUITests.m; sourceTree = "<group>"; };
+		1821620724B49BDC00A5752B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1821621424B49C9D00A5752B /* PetTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PetTableViewCell.h; sourceTree = "<group>"; };
+		1821621524B49C9D00A5752B /* PetTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PetTableViewCell.m; sourceTree = "<group>"; };
+		1821621624B49C9D00A5752B /* PetTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PetTableViewCell.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		182161D524B49BDA00A5752B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		182161F324B49BDC00A5752B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		182161FE24B49BDC00A5752B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		182161CF24B49BDA00A5752B = {
+			isa = PBXGroup;
+			children = (
+				182161DA24B49BDA00A5752B /* AsurionTestYamada */,
+				182161F924B49BDC00A5752B /* AsurionTestYamadaTests */,
+				1821620424B49BDC00A5752B /* AsurionTestYamadaUITests */,
+				182161D924B49BDA00A5752B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		182161D924B49BDA00A5752B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				182161D824B49BDA00A5752B /* AsurionTestYamada.app */,
+				182161F624B49BDC00A5752B /* AsurionTestYamadaTests.xctest */,
+				1821620124B49BDC00A5752B /* AsurionTestYamadaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		182161DA24B49BDA00A5752B /* AsurionTestYamada */ = {
+			isa = PBXGroup;
+			children = (
+				182161DB24B49BDA00A5752B /* AppDelegate.h */,
+				182161DC24B49BDA00A5752B /* AppDelegate.m */,
+				182161DE24B49BDA00A5752B /* SceneDelegate.h */,
+				182161DF24B49BDA00A5752B /* SceneDelegate.m */,
+				182161E124B49BDA00A5752B /* MasterViewController.h */,
+				182161E224B49BDA00A5752B /* MasterViewController.m */,
+				182161E424B49BDA00A5752B /* DetailViewController.h */,
+				182161E524B49BDA00A5752B /* DetailViewController.m */,
+				182161E724B49BDA00A5752B /* Main.storyboard */,
+				182161EA24B49BDC00A5752B /* Assets.xcassets */,
+				182161EC24B49BDC00A5752B /* LaunchScreen.storyboard */,
+				182161EF24B49BDC00A5752B /* Info.plist */,
+				182161F024B49BDC00A5752B /* main.m */,
+				1821621424B49C9D00A5752B /* PetTableViewCell.h */,
+				1821621524B49C9D00A5752B /* PetTableViewCell.m */,
+				1821621624B49C9D00A5752B /* PetTableViewCell.xib */,
+			);
+			path = AsurionTestYamada;
+			sourceTree = "<group>";
+		};
+		182161F924B49BDC00A5752B /* AsurionTestYamadaTests */ = {
+			isa = PBXGroup;
+			children = (
+				182161FA24B49BDC00A5752B /* AsurionTestYamadaTests.m */,
+				182161FC24B49BDC00A5752B /* Info.plist */,
+			);
+			path = AsurionTestYamadaTests;
+			sourceTree = "<group>";
+		};
+		1821620424B49BDC00A5752B /* AsurionTestYamadaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1821620524B49BDC00A5752B /* AsurionTestYamadaUITests.m */,
+				1821620724B49BDC00A5752B /* Info.plist */,
+			);
+			path = AsurionTestYamadaUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		182161D724B49BDA00A5752B /* AsurionTestYamada */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1821620A24B49BDC00A5752B /* Build configuration list for PBXNativeTarget "AsurionTestYamada" */;
+			buildPhases = (
+				182161D424B49BDA00A5752B /* Sources */,
+				182161D524B49BDA00A5752B /* Frameworks */,
+				182161D624B49BDA00A5752B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AsurionTestYamada;
+			productName = AsurionTestYamada;
+			productReference = 182161D824B49BDA00A5752B /* AsurionTestYamada.app */;
+			productType = "com.apple.product-type.application";
+		};
+		182161F524B49BDC00A5752B /* AsurionTestYamadaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1821620D24B49BDC00A5752B /* Build configuration list for PBXNativeTarget "AsurionTestYamadaTests" */;
+			buildPhases = (
+				182161F224B49BDC00A5752B /* Sources */,
+				182161F324B49BDC00A5752B /* Frameworks */,
+				182161F424B49BDC00A5752B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				182161F824B49BDC00A5752B /* PBXTargetDependency */,
+			);
+			name = AsurionTestYamadaTests;
+			productName = AsurionTestYamadaTests;
+			productReference = 182161F624B49BDC00A5752B /* AsurionTestYamadaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1821620024B49BDC00A5752B /* AsurionTestYamadaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1821621024B49BDC00A5752B /* Build configuration list for PBXNativeTarget "AsurionTestYamadaUITests" */;
+			buildPhases = (
+				182161FD24B49BDC00A5752B /* Sources */,
+				182161FE24B49BDC00A5752B /* Frameworks */,
+				182161FF24B49BDC00A5752B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1821620324B49BDC00A5752B /* PBXTargetDependency */,
+			);
+			name = AsurionTestYamadaUITests;
+			productName = AsurionTestYamadaUITests;
+			productReference = 1821620124B49BDC00A5752B /* AsurionTestYamadaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		182161D024B49BDA00A5752B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Fumitaka Yamada";
+				TargetAttributes = {
+					182161D724B49BDA00A5752B = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					182161F524B49BDC00A5752B = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 182161D724B49BDA00A5752B;
+					};
+					1821620024B49BDC00A5752B = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 182161D724B49BDA00A5752B;
+					};
+				};
+			};
+			buildConfigurationList = 182161D324B49BDA00A5752B /* Build configuration list for PBXProject "AsurionTestYamada" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 182161CF24B49BDA00A5752B;
+			productRefGroup = 182161D924B49BDA00A5752B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				182161D724B49BDA00A5752B /* AsurionTestYamada */,
+				182161F524B49BDC00A5752B /* AsurionTestYamadaTests */,
+				1821620024B49BDC00A5752B /* AsurionTestYamadaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		182161D624B49BDA00A5752B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				182161EE24B49BDC00A5752B /* LaunchScreen.storyboard in Resources */,
+				1821621A24B49C9D00A5752B /* PetTableViewCell.xib in Resources */,
+				182161EB24B49BDC00A5752B /* Assets.xcassets in Resources */,
+				182161E924B49BDA00A5752B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		182161F424B49BDC00A5752B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1821621B24B49C9D00A5752B /* PetTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		182161FF24B49BDC00A5752B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1821621C24B49C9D00A5752B /* PetTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		182161D424B49BDA00A5752B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				182161F124B49BDC00A5752B /* main.m in Sources */,
+				182161DD24B49BDA00A5752B /* AppDelegate.m in Sources */,
+				182161E324B49BDA00A5752B /* MasterViewController.m in Sources */,
+				1821621724B49C9D00A5752B /* PetTableViewCell.m in Sources */,
+				182161E024B49BDA00A5752B /* SceneDelegate.m in Sources */,
+				182161E624B49BDA00A5752B /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		182161F224B49BDC00A5752B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				182161FB24B49BDC00A5752B /* AsurionTestYamadaTests.m in Sources */,
+				1821621824B49C9D00A5752B /* PetTableViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		182161FD24B49BDC00A5752B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1821620624B49BDC00A5752B /* AsurionTestYamadaUITests.m in Sources */,
+				1821621924B49C9D00A5752B /* PetTableViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		182161F824B49BDC00A5752B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 182161D724B49BDA00A5752B /* AsurionTestYamada */;
+			targetProxy = 182161F724B49BDC00A5752B /* PBXContainerItemProxy */;
+		};
+		1821620324B49BDC00A5752B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 182161D724B49BDA00A5752B /* AsurionTestYamada */;
+			targetProxy = 1821620224B49BDC00A5752B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		182161E724B49BDA00A5752B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				182161E824B49BDA00A5752B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		182161EC24B49BDC00A5752B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				182161ED24B49BDC00A5752B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1821620824B49BDC00A5752B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1821620924B49BDC00A5752B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1821620B24B49BDC00A5752B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AsurionTestYamada/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fumitakayamada.AsurionTestYamada;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1821620C24B49BDC00A5752B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AsurionTestYamada/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fumitakayamada.AsurionTestYamada;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1821620E24B49BDC00A5752B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AsurionTestYamadaTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fumitakayamada.AsurionTestYamadaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AsurionTestYamada.app/AsurionTestYamada";
+			};
+			name = Debug;
+		};
+		1821620F24B49BDC00A5752B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AsurionTestYamadaTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fumitakayamada.AsurionTestYamadaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AsurionTestYamada.app/AsurionTestYamada";
+			};
+			name = Release;
+		};
+		1821621124B49BDC00A5752B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AsurionTestYamadaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fumitakayamada.AsurionTestYamadaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AsurionTestYamada;
+			};
+			name = Debug;
+		};
+		1821621224B49BDC00A5752B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AsurionTestYamadaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fumitakayamada.AsurionTestYamadaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AsurionTestYamada;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		182161D324B49BDA00A5752B /* Build configuration list for PBXProject "AsurionTestYamada" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1821620824B49BDC00A5752B /* Debug */,
+				1821620924B49BDC00A5752B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1821620A24B49BDC00A5752B /* Build configuration list for PBXNativeTarget "AsurionTestYamada" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1821620B24B49BDC00A5752B /* Debug */,
+				1821620C24B49BDC00A5752B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1821620D24B49BDC00A5752B /* Build configuration list for PBXNativeTarget "AsurionTestYamadaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1821620E24B49BDC00A5752B /* Debug */,
+				1821620F24B49BDC00A5752B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1821621024B49BDC00A5752B /* Build configuration list for PBXNativeTarget "AsurionTestYamadaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1821621124B49BDC00A5752B /* Debug */,
+				1821621224B49BDC00A5752B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 182161D024B49BDA00A5752B /* Project object */;
+}
