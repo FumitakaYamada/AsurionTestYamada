@@ -7,92 +7,198 @@
 //
 
 #import "MasterViewController.h"
-#import "DetailViewController.h"
+#import "Pet.h"
+#import "PetTableViewCell.h"
+#import "PetHeaderCellTableViewCell.h"
 
 @interface MasterViewController ()
 
-@property NSMutableArray *objects;
+@property NSArray *pets;
+
+@property bool isChatEnabled;
+@property bool isCallEnabled;
+@property NSString *workHours;
+
 @end
 
 @implementation MasterViewController
 
+NSString * const configIdentifier = @"ConfigDownloadIdentifier";
+NSString * const petIdentifier = @"PetDownloadIdentifier";
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
-
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
-    self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"PetHeaderCellTableViewCell" bundle:nil] forCellReuseIdentifier:@"PetHeaderCellTableViewCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"PetTableViewCell" bundle:nil] forCellReuseIdentifier:@"PetTableViewCell"];
+    
+    [self downloadConfigInfo];
+    [self downloadPetInfo];
+    
 }
 
+- (void)downloadConfigInfo {
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration backgroundSessionConfigurationWithIdentifier:configIdentifier];
+    
+    NSURLSession *session =
+    [NSURLSession sessionWithConfiguration:configuration
+                                  delegate:self
+                             delegateQueue:nil];
+    
+    NSURL* requestURL = [NSURL URLWithString:@"https://drive.google.com/uc?export=download&id=1ZIocrS2sEyS1nReII0PjdHcE7KYkqZ9J"];
+    NSURLSessionDownloadTask* task = [session downloadTaskWithURL:requestURL];
+    [task resume];
+}
+
+- (void)downloadPetInfo {
+    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration backgroundSessionConfigurationWithIdentifier:petIdentifier];
+    
+    NSURLSession *session =
+    [NSURLSession sessionWithConfiguration:configuration
+                                  delegate:self
+                             delegateQueue:nil];
+    
+    NSURL* requestURL = [NSURL URLWithString:@"https://drive.google.com/uc?export=download&id=1S3QmO-wbBoLQftGxloh2Cvz55-jQqB4F"];
+    NSURLSessionDownloadTask* task = [session downloadTaskWithURL:requestURL];
+    [task resume];
+}
+
+- (void)URLSession:(NSURLSession *)session
+      downloadTask:(NSURLSessionDownloadTask *)downloadTask didFinishDownloadingToURL:(NSURL *)location
+{
+    NSData* data = [NSData dataWithContentsOfURL:location];
+    if ([session.configuration.identifier isEqualToString:configIdentifier]) {
+        if (data.length == 0) {
+            NSLog(@"failed to download config");
+            return;
+        }
+        
+        NSError *error = nil;
+        
+        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data
+                                                             options:NSJSONReadingAllowFragments
+                                                               error:&error];
+        
+        NSLog(@"config downloaded : %@, error :%@", json, error);
+        
+        NSDictionary *settings = json[@"settings"];
+        
+        self.workHours = settings[@"workHours"];
+        self.isChatEnabled = settings[@"isChatEnabled"];
+        self.isCallEnabled = settings[@"isCallEnabled"];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadData];
+        });
+        return;
+    }
+    
+    if ([session.configuration.identifier isEqualToString:petIdentifier]) {
+        if (data.length == 0) {
+            NSLog(@"failed to download pet info");
+            return;
+        }
+        
+        NSError *error = nil;
+        
+        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data
+                                                             options:NSJSONReadingAllowFragments
+                                                               error:&error];
+        
+        NSLog(@"pets downloaded : %@, error :%@", json, error);
+        
+        NSArray *petsJson = json[@"pets"];
+        
+        NSMutableArray *pets = [NSMutableArray array];
+        
+        for (NSDictionary *petDictionary in petsJson) {
+            Pet *pet = [Pet new];
+            
+            pet.contentUrl = petDictionary[@"content_url"];
+            pet.dateAddedString = petDictionary[@"date_added"];
+            pet.imageUrl = petDictionary[@"image_url"];
+            pet.title = petDictionary[@"title"];
+            
+            [pets addObject:pet];
+        }
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.pets = pets;
+            [self.tableView reloadData];
+        });
+        return;
+    }
+    
+    
+}
 
 - (void)viewWillAppear:(BOOL)animated {
     self.clearsSelectionOnViewWillAppear = self.splitViewController.isCollapsed;
     [super viewWillAppear:animated];
 }
 
-
-- (void)insertNewObject:(id)sender {
-    if (!self.objects) {
-        self.objects = [[NSMutableArray alloc] init];
-    }
-    [self.objects insertObject:[NSDate date] atIndex:0];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-}
-
-
-#pragma mark - Segues
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:@"showDetail"]) {
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = self.objects[indexPath.row];
-        DetailViewController *controller = (DetailViewController *)[[segue destinationViewController] topViewController];
-        controller.detailItem = object;
-        controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
-        controller.navigationItem.leftItemsSupplementBackButton = YES;
-        self.detailViewController = controller;
-    }
-}
-
-
 #pragma mark - Table View
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    switch (indexPath.section) {
+        case 0:
+            return (self.isChatEnabled || self.isCallEnabled) ? 150 : 80;
+        case 1:
+            return 120;
+            
+        default:
+            return 0;
+    }
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return 2;
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.objects.count;
+    switch (section) {
+        case 0:
+            return 1;
+        case 1:
+            return self.pets.count;
+            
+        default:
+            return 0;
+    }
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    UITableViewCell *cell = nil;
+    
+    switch (indexPath.section) {
+        case 0:{
+            PetHeaderCellTableViewCell *headerCell = [tableView dequeueReusableCellWithIdentifier:@"PetHeaderCellTableViewCell" forIndexPath:indexPath];
+            if (self.workHours != nil) {
+                headerCell.officeHoursLabel.text = [NSString stringWithFormat:@"Office Hours: %@", self.workHours];
+            }
+            
+            cell = headerCell;
+        }
+            break;
+        case 1:{
+            PetTableViewCell *petCell = [tableView dequeueReusableCellWithIdentifier:@"PetTableViewCell" forIndexPath:indexPath];
+            Pet *pet = self.pets[indexPath.row];
+            
+            [petCell setPet:pet];
+            
+            
+            cell = petCell;
+        }
+            break;
+        default:
+            break;
+    }
 
-    NSDate *object = self.objects[indexPath.row];
-    cell.textLabel.text = [object description];
+    
     return cell;
 }
-
-
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-
-
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [self.objects removeObjectAtIndex:indexPath.row];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-    }
-}
-
 
 @end

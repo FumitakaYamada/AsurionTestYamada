@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Pet.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface PetTableViewCell : UITableViewCell
+
+@property (weak, nonatomic) Pet *pet;
 
 @end
 

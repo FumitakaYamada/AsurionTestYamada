@@ -23,6 +23,9 @@
 		1821621A24B49C9D00A5752B /* PetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1821621624B49C9D00A5752B /* PetTableViewCell.xib */; };
 		1821621B24B49C9D00A5752B /* PetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1821621624B49C9D00A5752B /* PetTableViewCell.xib */; };
 		1821621C24B49C9D00A5752B /* PetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1821621624B49C9D00A5752B /* PetTableViewCell.xib */; };
+		183FC46324B4A0A7006B9495 /* Pet.m in Sources */ = {isa = PBXBuildFile; fileRef = 183FC46224B4A0A7006B9495 /* Pet.m */; };
+		183FC46724B74D9F006B9495 /* PetHeaderCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 183FC46524B74D9F006B9495 /* PetHeaderCellTableViewCell.m */; };
+		183FC46824B74D9F006B9495 /* PetHeaderCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183FC46624B74D9F006B9495 /* PetHeaderCellTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,11 +49,9 @@
 		182161D824B49BDA00A5752B /* AsurionTestYamada.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AsurionTestYamada.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		182161DB24B49BDA00A5752B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		182161DC24B49BDA00A5752B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		182161DE24B49BDA00A5752B /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		182161DF24B49BDA00A5752B /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		182161E124B49BDA00A5752B /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		182161E224B49BDA00A5752B /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		182161E424B49BDA00A5752B /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		182161E524B49BDA00A5752B /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		182161E824B49BDA00A5752B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		182161EA24B49BDC00A5752B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -66,6 +67,13 @@
 		1821621424B49C9D00A5752B /* PetTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PetTableViewCell.h; sourceTree = "<group>"; };
 		1821621524B49C9D00A5752B /* PetTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PetTableViewCell.m; sourceTree = "<group>"; };
 		1821621624B49C9D00A5752B /* PetTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PetTableViewCell.xib; sourceTree = "<group>"; };
+		183FC46124B4A0A7006B9495 /* Pet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Pet.h; sourceTree = "<group>"; };
+		183FC46224B4A0A7006B9495 /* Pet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Pet.m; sourceTree = "<group>"; };
+		183FC46424B74D9F006B9495 /* PetHeaderCellTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PetHeaderCellTableViewCell.h; sourceTree = "<group>"; };
+		183FC46524B74D9F006B9495 /* PetHeaderCellTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PetHeaderCellTableViewCell.m; sourceTree = "<group>"; };
+		183FC46624B74D9F006B9495 /* PetHeaderCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PetHeaderCellTableViewCell.xib; sourceTree = "<group>"; };
+		18AA0A8724B76DC600CBEC9F /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		18AA0A8924B76E3C00CBEC9F /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,13 +124,14 @@
 		182161DA24B49BDA00A5752B /* AsurionTestYamada */ = {
 			isa = PBXGroup;
 			children = (
+				183FC46024B4A081006B9495 /* DomainModel */,
 				182161DB24B49BDA00A5752B /* AppDelegate.h */,
 				182161DC24B49BDA00A5752B /* AppDelegate.m */,
-				182161DE24B49BDA00A5752B /* SceneDelegate.h */,
+				18AA0A8724B76DC600CBEC9F /* SceneDelegate.h */,
 				182161DF24B49BDA00A5752B /* SceneDelegate.m */,
 				182161E124B49BDA00A5752B /* MasterViewController.h */,
 				182161E224B49BDA00A5752B /* MasterViewController.m */,
-				182161E424B49BDA00A5752B /* DetailViewController.h */,
+				18AA0A8924B76E3C00CBEC9F /* DetailViewController.h */,
 				182161E524B49BDA00A5752B /* DetailViewController.m */,
 				182161E724B49BDA00A5752B /* Main.storyboard */,
 				182161EA24B49BDC00A5752B /* Assets.xcassets */,
@@ -132,6 +141,9 @@
 				1821621424B49C9D00A5752B /* PetTableViewCell.h */,
 				1821621524B49C9D00A5752B /* PetTableViewCell.m */,
 				1821621624B49C9D00A5752B /* PetTableViewCell.xib */,
+				183FC46424B74D9F006B9495 /* PetHeaderCellTableViewCell.h */,
+				183FC46524B74D9F006B9495 /* PetHeaderCellTableViewCell.m */,
+				183FC46624B74D9F006B9495 /* PetHeaderCellTableViewCell.xib */,
 			);
 			path = AsurionTestYamada;
 			sourceTree = "<group>";
@@ -152,6 +164,15 @@
 				1821620724B49BDC00A5752B /* Info.plist */,
 			);
 			path = AsurionTestYamadaUITests;
+			sourceTree = "<group>";
+		};
+		183FC46024B4A081006B9495 /* DomainModel */ = {
+			isa = PBXGroup;
+			children = (
+				183FC46124B4A0A7006B9495 /* Pet.h */,
+				183FC46224B4A0A7006B9495 /* Pet.m */,
+			);
+			path = DomainModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +280,7 @@
 			files = (
 				182161EE24B49BDC00A5752B /* LaunchScreen.storyboard in Resources */,
 				1821621A24B49C9D00A5752B /* PetTableViewCell.xib in Resources */,
+				183FC46824B74D9F006B9495 /* PetHeaderCellTableViewCell.xib in Resources */,
 				182161EB24B49BDC00A5752B /* Assets.xcassets in Resources */,
 				182161E924B49BDA00A5752B /* Main.storyboard in Resources */,
 			);
@@ -287,9 +309,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				183FC46324B4A0A7006B9495 /* Pet.m in Sources */,
 				182161F124B49BDC00A5752B /* main.m in Sources */,
 				182161DD24B49BDA00A5752B /* AppDelegate.m in Sources */,
 				182161E324B49BDA00A5752B /* MasterViewController.m in Sources */,
+				183FC46724B74D9F006B9495 /* PetHeaderCellTableViewCell.m in Sources */,
 				1821621724B49C9D00A5752B /* PetTableViewCell.m in Sources */,
 				182161E024B49BDA00A5752B /* SceneDelegate.m in Sources */,
 				182161E624B49BDA00A5752B /* DetailViewController.m in Sources */,
