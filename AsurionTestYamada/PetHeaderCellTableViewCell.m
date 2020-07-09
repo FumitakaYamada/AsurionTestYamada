@@ -19,14 +19,11 @@
 - (void)setChatAndCallButton:(BOOL)chatAvailable withCall:(BOOL)callAvailable
 {
     if (chatAvailable && callAvailable) {
-        self.callButtonWidth.constant = self.frame.size.width / 2;
-        self.chatButtonWidth.constant = self.frame.size.width / 2;
+        
     } else if (chatAvailable) {
-        self.callButtonWidth.constant = 0;
-        self.chatButtonWidth.constant = self.frame.size.width;
-    } else {
-        self.callButtonWidth.constant = self.frame.size.width;
-        self.chatButtonWidth.constant = 0;
+        [self.callView removeFromSuperview];
+    } else if (callAvailable) {
+        [self.chatView removeFromSuperview];
     }
 }
 
@@ -36,12 +33,39 @@
     
 }
 
-- (IBAction)callButtonPushed:(id)sender {
+- (void)showAlert {
+    NSString *message = nil;
     
+    NSDate *date = [NSDate date];
+    NSInteger hour = 0;
+    NSInteger minute = 0;
+    NSCalendar *currentCalendar = [NSCalendar currentCalendar];
+    [currentCalendar getHour:&hour minute:&minute second:NULL nanosecond:NULL fromDate:date];
+    
+    if (hour > 9 && hour < 18) { // TODO: stop hard coded check and parse from response json
+        message = @"Thank you for getting in touch with us. We’ll get back to you as soon as possible";
+    } else {
+        message = @"Work hours has ended. Please contact us again on the next work day";
+        
+    }
+    
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:message message:nil preferredStyle:UIAlertControllerStyleAlert];
+    
+    [alertController addAction:[UIAlertAction actionWithTitle:@"OK"
+                                                        style:UIAlertActionStyleDefault
+                                                      handler:^(UIAlertAction *action) {
+                                                      }]];
+    
+    [[UIApplication sharedApplication].windows.firstObject.rootViewController presentViewController:alertController animated:YES completion:nil];
+
+}
+
+- (IBAction)callButtonPushed:(id)sender {
+    [self showAlert];
 }
 
 - (IBAction)chatButtonPushed:(id)sender {
-    
+    [self showAlert];
 }
 
 @end

@@ -85,8 +85,8 @@ NSString * const petIdentifier = @"PetDownloadIdentifier";
         NSDictionary *settings = json[@"settings"];
         
         self.workHours = settings[@"workHours"];
-        self.isChatEnabled = settings[@"isChatEnabled"];
-        self.isCallEnabled = settings[@"isCallEnabled"];
+        self.isChatEnabled = [settings[@"isChatEnabled"] boolValue];
+        self.isCallEnabled = [settings[@"isCallEnabled"] boolValue];
         
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.tableView reloadData];
@@ -192,6 +192,8 @@ NSString * const petIdentifier = @"PetDownloadIdentifier";
             if (self.workHours != nil) {
                 headerCell.officeHoursLabel.text = [NSString stringWithFormat:@"Office Hours: %@", self.workHours];
             }
+            
+            [headerCell setChatAndCallButton:self.isChatEnabled withCall:self.isCallEnabled];
             
             cell = headerCell;
         }

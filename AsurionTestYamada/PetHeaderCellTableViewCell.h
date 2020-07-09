@@ -14,9 +14,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, weak) IBOutlet UILabel *officeHoursLabel;
 
-@property (nonatomic, weak) IBOutlet NSLayoutConstraint *centerMarginWidth;
-@property (nonatomic, weak) IBOutlet NSLayoutConstraint *chatButtonWidth;
-@property (nonatomic, weak) IBOutlet NSLayoutConstraint *callButtonWidth;
+@property (nonatomic, weak) IBOutlet UIView *chatView;
+@property (nonatomic, weak) IBOutlet UIView *callView;
+
+- (void)setChatAndCallButton:(BOOL)chatAvailable withCall:(BOOL)callAvailable;
 
 @end
 
