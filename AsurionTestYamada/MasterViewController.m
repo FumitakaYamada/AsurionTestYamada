@@ -10,6 +10,7 @@
 #import "Pet.h"
 #import "PetTableViewCell.h"
 #import "PetHeaderCellTableViewCell.h"
+#import "DetailViewController.h"
 
 @interface MasterViewController ()
 
@@ -138,6 +139,18 @@ NSString * const petIdentifier = @"PetDownloadIdentifier";
 }
 
 #pragma mark - Table View
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    Pet *pet = self.pets[indexPath.row];
+    
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    DetailViewController *dvc = [DetailViewController loadFromNib];
+    
+    [self.navigationController pushViewController:dvc animated:YES];
+    [dvc openUrl:pet.contentUrl];
+}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {

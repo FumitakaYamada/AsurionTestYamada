@@ -8,11 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class DetailViewController;
-
 @interface MasterViewController : UITableViewController <NSURLSessionDelegate>
-
-@property (strong, nonatomic) DetailViewController *detailViewController;
 
 
 @end

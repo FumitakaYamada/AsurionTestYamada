@@ -26,6 +26,8 @@
 		183FC46324B4A0A7006B9495 /* Pet.m in Sources */ = {isa = PBXBuildFile; fileRef = 183FC46224B4A0A7006B9495 /* Pet.m */; };
 		183FC46724B74D9F006B9495 /* PetHeaderCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 183FC46524B74D9F006B9495 /* PetHeaderCellTableViewCell.m */; };
 		183FC46824B74D9F006B9495 /* PetHeaderCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183FC46624B74D9F006B9495 /* PetHeaderCellTableViewCell.xib */; };
+		18AA0A8C24B7704C00CBEC9F /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18AA0A8B24B7704C00CBEC9F /* WebKit.framework */; };
+		18AA0A8E24B7711300CBEC9F /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18AA0A8D24B7711300CBEC9F /* DetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,8 @@
 		183FC46624B74D9F006B9495 /* PetHeaderCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PetHeaderCellTableViewCell.xib; sourceTree = "<group>"; };
 		18AA0A8724B76DC600CBEC9F /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		18AA0A8924B76E3C00CBEC9F /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		18AA0A8B24B7704C00CBEC9F /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		18AA0A8D24B7711300CBEC9F /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18AA0A8C24B7704C00CBEC9F /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +113,7 @@
 				182161F924B49BDC00A5752B /* AsurionTestYamadaTests */,
 				1821620424B49BDC00A5752B /* AsurionTestYamadaUITests */,
 				182161D924B49BDA00A5752B /* Products */,
+				18AA0A8A24B7704C00CBEC9F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,6 +139,7 @@
 				182161E224B49BDA00A5752B /* MasterViewController.m */,
 				18AA0A8924B76E3C00CBEC9F /* DetailViewController.h */,
 				182161E524B49BDA00A5752B /* DetailViewController.m */,
+				18AA0A8D24B7711300CBEC9F /* DetailViewController.xib */,
 				182161E724B49BDA00A5752B /* Main.storyboard */,
 				182161EA24B49BDC00A5752B /* Assets.xcassets */,
 				182161EC24B49BDC00A5752B /* LaunchScreen.storyboard */,
@@ -173,6 +180,14 @@
 				183FC46224B4A0A7006B9495 /* Pet.m */,
 			);
 			path = DomainModel;
+			sourceTree = "<group>";
+		};
+		18AA0A8A24B7704C00CBEC9F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18AA0A8B24B7704C00CBEC9F /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				182161EE24B49BDC00A5752B /* LaunchScreen.storyboard in Resources */,
+				18AA0A8E24B7711300CBEC9F /* DetailViewController.xib in Resources */,
 				1821621A24B49C9D00A5752B /* PetTableViewCell.xib in Resources */,
 				183FC46824B74D9F006B9495 /* PetHeaderCellTableViewCell.xib in Resources */,
 				182161EB24B49BDC00A5752B /* Assets.xcassets in Resources */,
